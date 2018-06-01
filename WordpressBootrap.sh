@@ -1,5 +1,7 @@
 #!/bin/bash
 wpCurrDir=$PWD
+#WARNING: TEST SCRIPT ON DEDICATED SERVER> SCRIPT IN PROGRESS AND MAY CAUSES UNINTENDED EFFECTS!
+
 #Doesn't it make sense to just do sudo su instead of the if/else statement below? Please advise.
 sudo su
 
