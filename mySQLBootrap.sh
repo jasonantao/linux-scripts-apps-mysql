@@ -1,11 +1,10 @@
 #!/bin/bash
 sqlCurrDir=$PWD
-sudo su
 
 #Checking for requirement that super-user is being run, otherwise do not proceed.
 if [ "$EUID" -ne 0 ]
   then echo "Please run as root or under sudo"
-  exit -1
+  return -1
 fi
 
 #Initial update of server
@@ -16,9 +15,6 @@ yum update -y
 #--MySQL
 yum install git -y
 yum install mysql-server -y
-
-#Setting git parameters
-branch=master
 
 #Configuring MySQL for autmatic startup on reboot
 chkconfig mysqld on
