@@ -14,7 +14,8 @@ yum update -y
 #--Git
 #--MySQL
 yum install git -y
-yum install mysql-server -y
+#Placing into environment file.
+#yum install mysql-server -y
 
 #Set Cloning Properties
 pkg=mySQL
