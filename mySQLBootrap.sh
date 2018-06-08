@@ -20,7 +20,7 @@ yum install mysql-server -y
 pkg=mySQL
 gitRepo="linux-scripts-apps-mysql.git"
 #installDir="/tmp/scripts/apps/JBOSS"
-installDir="/tmp/scripts/apps/mySQL"
+installDir="/tmp/scripts/db/mySQL"
 
 
 
