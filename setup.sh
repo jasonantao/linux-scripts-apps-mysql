@@ -8,8 +8,8 @@
 #chkconfig mysqld on
 #service mysqld start
 
-mysqluser=admin
-mysqlpass=admin
+mysqluser=jason
+mysqlpass=jason
 mysqlhost=${mysqlhost:-localhost}
 echo "============================================"
 echo "Setting up the database."
