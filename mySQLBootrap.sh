@@ -35,7 +35,8 @@ echo Executing $clone$gitRepo $installDir
 $clone$gitRepo $installDir
 
 # Setup $pkg
-cd $installDir
+#cd $installDir
+cd $HOME
 ./setup.sh
 
 cd $sqlCurrDir
