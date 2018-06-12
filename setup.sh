@@ -5,7 +5,7 @@
 . ./env/setEnv.sh
 
 #Configuring MySQL for autmatic startup on reboot
-chkconfig mysqld on
+#chkconfig mysqld on
 #service mysqld start
 
 mysqluser=admin
