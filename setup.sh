@@ -6,7 +6,7 @@
 
 #Configuring MySQL for autmatic startup on reboot
 chkconfig mysqld on
-service mysqld start
+#service mysqld start
 
 mysqluser=admin
 mysqlpass=admin
