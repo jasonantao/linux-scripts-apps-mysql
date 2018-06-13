@@ -11,13 +11,14 @@
 mysqluser=jason
 mysqlpass=jason
 mysqlhost=${mysqlhost:-localhost}
-echo "============================================"
-echo "Setting up the database."
-echo "============================================"
-#login to MySQL, add database, add user and grant permissions
+dbname=jason
+dbuser=jason
+dbpass=jason
+dbtable=${dbtable:-wp_}
+
 dbsetup="create database $dbname;GRANT ALL PRIVILEGES ON $dbname.* TO $dbuser@$mysqlhost IDENTIFIED BY '$dbpass';FLUSH PRIVILEGES;"
 mysql -u $mysqluser -p$mysqlpass -e "$dbsetup"
-exit
+exit;
 #mySQL user settings
 #mysqladmin -u root password [password] -y
 #mysqladmin -u root -p create [new_wp_db]
@@ -35,7 +36,7 @@ exit
 
 #GRANT ALL PRIVILEGES ON wp_db.* TO "owner"@"localhost" IDENTIFIED BY "password"
 #FLUSH PRIVILEGES
-echo Privelges Flushed ~ mySQL Site 
+#echo Privelges Flushed ~ mySQL Site 
 cd $sqlCurrDir
 #End of mySQLScript
 
