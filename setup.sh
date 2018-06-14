@@ -6,20 +6,28 @@
 
 #Configuring MySQL for autmatic startup on reboot
 #chkconfig mysqld on
-service mysqld start
+
 
 mysqluser=jason
 mysqlpass=jason
-mysqlhost=127.0.0.1
+mysqlhost=localhost
 dbname=jason
 dbuser=jason
 dbpass=jason
 dbtable=${dbtable:-wp_}
 
-dbsetup="create database $dbname;GRANT ALL PRIVILEGES ON $dbname.* TO $dbuser@$mysqlhost IDENTIFIED BY '$dbpass';FLUSH PRIVILEGES;"
+service mysqld start
+mysql -u root
+
+create database jason
+GRANT ALL PRIVILEGES ON jason.* TO jason@localhost IDENTIFIED BY 'jason';
+FLUSH PRIVILEGES;
+exit
+
 mysql -u $mysqluser -p$mysqlpass -e "$dbsetup"
-mysql -u jason -p -jason
-exit;
+mysql -u root jason
+show databases;
+
 #mySQL user settings
 #mysqladmin -u root password [password] -y
 #mysqladmin -u root -p create [new_wp_db]
@@ -38,5 +46,5 @@ exit;
 #GRANT ALL PRIVILEGES ON wp_db.* TO "owner"@"localhost" IDENTIFIED BY "password"
 #FLUSH PRIVILEGES
 #echo Privelges Flushed ~ mySQL Site 
-cd $sqlCurrDir
+#cd $sqlCurrDir
 #End of mySQLScript
