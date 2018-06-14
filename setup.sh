@@ -18,6 +18,7 @@ dbtable=${dbtable:-wp_}
 
 dbsetup="create database $dbname;GRANT ALL PRIVILEGES ON $dbname.* TO $dbuser@$mysqlhost IDENTIFIED BY '$dbpass';FLUSH PRIVILEGES;"
 mysql -u $mysqluser -p$mysqlpass -e "$dbsetup"
+mysql -u jason -p -jason
 exit;
 #mySQL user settings
 #mysqladmin -u root password [password] -y
@@ -39,25 +40,3 @@ exit;
 #echo Privelges Flushed ~ mySQL Site 
 cd $sqlCurrDir
 #End of mySQLScript
-
-##############################################################################################################
-#CHECK IF WILDFLY INSTALLED AND RETURN IF INSTALLED
-#. ./utils/exitIfInstalled.sh $wfHome
-
-# INSTALL REQUIRED DEVELOPMENT LIBRARIES
-#./install//installJava8.sh
-
-# SET UP WILDFLY ADMIN USER
-#./install/addPkgUser.sh $wfOwner $wfGroup $wfHome $pkg
-
-# DOWNLOAD AND INSTALL WILDFLY 10
-#./install/installjBoss10.sh $wfOwner $wfGroup $wfHome $wfLog
-
-# SET UP WILDFLY REMOTING CONFIGURATION 
-#./install/configjBossRemoting.sh $wfHome $wfAdmin
-
-# CONFIGURE WILDFLY AS A SERVICE AND START WILDFLY SERVICE
-#./install/addjBossAsService.sh $wfHome 
-
-# START JBOSS WILDFLY
-#service wildfly start
