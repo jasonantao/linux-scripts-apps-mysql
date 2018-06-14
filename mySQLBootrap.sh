@@ -36,7 +36,32 @@ $clone$gitRepo $installDir
 
 # Setup $pkg
 cd $installDir
-./setup.sh
 
+
+#./setup.sh
+
+
+#########################################
+## FOr testing purposes
+
+mysqluser=jason
+mysqlpass=jason
+mysqlhost=localhost
+dbname=jason
+dbuser=jason
+dbpass=jason
+dbtable=${dbtable:-wp_}
+
+service mysqld start
+mysql -u root
+
+create database jason
+GRANT ALL PRIVILEGES ON jason.* TO jason@localhost IDENTIFIED BY 'jason';
+FLUSH PRIVILEGES;
+exit
+
+mysql -u $mysqluser -p$mysqlpass -e "$dbsetup"
+mysql -u root jason
+show databases;
 
 
