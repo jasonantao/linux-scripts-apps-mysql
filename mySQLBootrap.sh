@@ -38,5 +38,5 @@ $clone$gitRepo $installDir
 cd $installDir
 ./setup.sh
 
-cd $sqlCurrDir
+
 
