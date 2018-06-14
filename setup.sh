@@ -6,11 +6,11 @@
 
 #Configuring MySQL for autmatic startup on reboot
 #chkconfig mysqld on
-#service mysqld start
+service mysqld start
 
 mysqluser=jason
 mysqlpass=jason
-mysqlhost=${mysqlhost:-localhost}
+mysqlhost=127.0.0.1
 dbname=jason
 dbuser=jason
 dbpass=jason
