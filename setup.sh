@@ -7,6 +7,8 @@
 #Configuring MySQL for autmatic startup on reboot
 #chkconfig mysqld on
 
+cd $HOME
+
 mysqluser=jason
 mysqlpass=jason
 mysqlhost=localhost
@@ -36,6 +38,6 @@ service mysqld restart
 mysql -u root
 
 create database jason
-GRANT ALL PRIVILEGES ON jason.* TO root@localhost IDENTIFIED BY 'jason';
+GRANT ALL PRIVILEGES ON root.* TO root@localhost IDENTIFIED BY 'root';
 FLUSH PRIVILEGES;
 exit
