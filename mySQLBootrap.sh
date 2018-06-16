@@ -14,7 +14,9 @@ yum update -y
 #--Git
 #--MySQL
 yum install git -y
-yum install mysql-server -y
+#yum install mysql-server -y
+
+yum -q -y install mysql-server
 
 #Set Cloning Properties
 pkg=mySQL
@@ -38,6 +40,28 @@ $clone$gitRepo $installDir
 cd $installDir
 
 
+
+cd $HOME
+ls
+cd var
+ls
+cd lib
+ls
+cd mysql
+ls
+
+chown mysql:mysql -R /var/*
+chown mysql:mysql -R /var/lib/*
+chown mysql:mysql -R /var/lib/mysql/*
+
+chmod 755 -R /var/lib/mysql/*
+chmod 755 -R /var/lib/*
+
+service mysqld restart
+
+mysql -u root
+
+
 #./setup.sh
 
 
@@ -50,13 +74,15 @@ mysqlhost=localhost
 dbname=jason
 dbuser=jason
 dbpass=jason
-db table=${dbtable:-wp_}cd /tmp/scripts/db/mySQL
+dbtable=${dbtable:-wp_}
 
-service mysqld start
-mysql -u root -p
+#cd /tmp/scripts/db/mySQL
+
+#service mysqld start
+mysql -u root
 
 create database jason
-GRANT ALL PRIVILEGES ON jason.* TO jason@localhost IDENTIFIED BY 'jason';
+GRANT ALL PRIVILEGES ON jason.* TO root@localhost IDENTIFIED BY 'jason';
 FLUSH PRIVILEGES;
 exit
 
