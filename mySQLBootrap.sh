@@ -40,4 +40,4 @@ $clone$gitRepo $installDir
 cd $installDir
 
 
-./setup.sh
+. ./setup.sh
