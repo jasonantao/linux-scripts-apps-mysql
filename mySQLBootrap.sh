@@ -50,7 +50,7 @@ mysqlhost=localhost
 dbname=jason
 dbuser=jason
 dbpass=jason
-dbtable=${dbtable:-wp_}
+db table=${dbtable:-wp_}cd /tmp/scripts/db/mySQL
 
 service mysqld start
 mysql -u root -p
