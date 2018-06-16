@@ -53,7 +53,7 @@ dbpass=jason
 dbtable=${dbtable:-wp_}
 
 service mysqld start
-mysql -u root
+mysql -u root -p
 
 create database jason
 GRANT ALL PRIVILEGES ON jason.* TO jason@localhost IDENTIFIED BY 'jason';
