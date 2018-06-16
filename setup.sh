@@ -9,15 +9,6 @@
 
 cd $HOME
 
-mysqluser=jason
-mysqlpass=jason
-mysqlhost=localhost
-dbname=jason
-dbuser=jason
-dbpass=jason
-dbtable=${dbtable:-wp_}
-
-cd $HOME
 ls
 cd var
 ls
