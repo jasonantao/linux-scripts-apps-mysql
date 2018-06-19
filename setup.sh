@@ -7,16 +7,21 @@
 #Configuring MySQL for autmatic startup on reboot
 #chkconfig mysqld on
 
+echo "HERE 0"
 cd $HOME
 
+echo "HERE 2"
 ls
 cd var
+echo "HERE 3"
 ls
 cd lib
 ls
+echo "HERE 4"
 cd mysql
 ls
 
+echo "HERE 5"
 chown mysql:mysql -R /var/*
 chown mysql:mysql -R /var/lib/*
 chown mysql:mysql -R /var/lib/mysql/*
