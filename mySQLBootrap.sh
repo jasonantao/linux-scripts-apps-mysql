@@ -40,6 +40,10 @@ $clone$gitRepo $installDir
 cd $installDir
 
 
-./setup.sh
+# MAKE ALL SHELL SCRIPTS EXECUTABLE TO ROOT ONLY
+find . -name "*.sh" -exec chmod 700 {} \;
 
-cd $installDir
+# Setup Project
+./setup.sh 2>&1| tee setup.log
+
+cd $mySqlCurrDir
