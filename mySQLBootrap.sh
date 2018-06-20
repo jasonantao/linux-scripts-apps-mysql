@@ -8,7 +8,13 @@ if [ "$EUID" -ne 0 ]
 fi
 
 #Initial update of server
+wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+sudo rpm -ivh mysql-community-release-el7-5.noarch.rpm
 yum update -y
+
+# Finally Install MySQL as usual and start the service. 
+sudo yum install mysql-server -y
+sudo systemctl start mysqld
 
 #Installation of Required Programs
 #--Git
@@ -16,7 +22,7 @@ yum update -y
 yum install git -y
 #yum install mysql-server -y
 
-yum -q -y install mysql-server
+#yum -q -y install mysql-server
 
 #Set Cloning Properties
 pkg=mySQL
