@@ -13,8 +13,22 @@ sudo rpm -ivh mysql-community-release-el7-5.noarch.rpm
 yum update -y
 
 # Finally Install MySQL as usual and start the service. 
-sudo yum install mysql-server -y
-sudo systemctl start mysqld
+#sudo yum install mysql-server -y
+#sudo systemctl start mysqld
+
+yum repolist enabled | grep "mysql.*-community.*"
+yum install mysql56-server
+service mysqld start
+service mysqld status
+mysql_secure_installation
+
+n
+n
+n
+n
+n
+
+
 
 #Installation of Required Programs
 #--Git
