@@ -17,16 +17,15 @@ yum update -y
 #sudo systemctl start mysqld
 
 yum repolist enabled | grep "mysql.*-community.*"
-yum install mysql56-server
+yum install mysql56-server -y
 service mysqld start
-service mysqld status
-mysql_secure_installation
+#service mysqld stat
 
-n
-n
-n
-n
-n
+#n
+#n
+#n
+#n
+#n
 
 
 
