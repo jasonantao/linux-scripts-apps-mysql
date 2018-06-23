@@ -65,5 +65,9 @@ find . -name "*.sh" -exec chmod 700 {} \;
 # Setup Project
 ./setup.sh
 #./setup.sh 2>&1| tee setup.log
-
+mysql> create database jason
+mysql> GRANT ALL PRIVILEGES ON root.* TO root@localhost IDENTIFIED BY 'root';
+mysql> FLUSH PRIVILEGES;
+mysql> exit
 cd $mySqlCurrDir
+
