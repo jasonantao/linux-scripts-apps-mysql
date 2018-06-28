@@ -13,38 +13,28 @@ sudo rpm -ivh mysql-community-release-el7-5.noarch.rpm
 yum update -y
 
 # Finally Install MySQL as usual and start the service. 
-#sudo yum install mysql-server -y
-#sudo systemctl start mysqld
-
 yum repolist enabled | grep "mysql.*-community.*"
 #yum install mysql56-server -y
 yum install mysql-community-server -y
 service mysqld start
-#service mysqld stat
 
 #n
 #n
 #n
 #n
 #n
-
-
 
 #Installation of Required Programs
 #--Git
 #--MySQL
 yum install git -y
-#yum install mysql-server -y
 
 #yum -q -y install mysql-server
 
 #Set Cloning Properties
 pkg=mySQL
 gitRepo="linux-scripts-apps-mysql.git"
-#installDir="/tmp/scripts/apps/JBOSS"
 installDir="/tmp/scripts/db/mySQL"
-
-
 
 if [ -f ~/.ssh/gitHub.key ]; then
    clone="git clone git@github.com:jasonantao/"
@@ -59,16 +49,11 @@ $clone$gitRepo $installDir
 # Setup $pkg
 cd $installDir
 
-
 # MAKE ALL SHELL SCRIPTS EXECUTABLE TO ROOT ONLY
 find . -name "*.sh" -exec chmod 700 {} \;
 
 # Setup Project
 ./setup.sh
 #./setup.sh 2>&1| tee setup.log
-#mysql> create database jason;
-#mysql> GRANT ALL PRIVILEGES ON root.* TO root@localhost IDENTIFIED BY 'root';
-#mysql> FLUSH PRIVILEGES;
-#mysql> exit;
-cd $mySqlCurrDir
 
+cd $mySqlCurrDir
