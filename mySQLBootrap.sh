@@ -57,3 +57,4 @@ find . -name "*.sh" -exec chmod 700 {} \;
 #./setup.sh 2>&1| tee setup.log
 
 cd $mySqlCurrDir
+echo "You are now done and have installed mySQL Thank you for using this script by Jason Antao"
