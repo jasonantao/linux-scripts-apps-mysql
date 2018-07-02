@@ -60,3 +60,7 @@ exit;
 cd $mySqlCurrDir
 echo "You are now done and have installed mySQL Thank you for using this script by Jason Antao"
 #Add exit statement
+ls
+#For second Linux AMI from AWS below
+yum install mysql -y
+mysql --version
