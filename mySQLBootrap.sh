@@ -62,5 +62,6 @@ echo "You are now done and have installed mySQL Thank you for using this script 
 #Add exit statement
 ls
 #For second Linux AMI from AWS below
+sudo su
 yum install mysql -y
 mysql --version
