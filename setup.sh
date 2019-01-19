@@ -6,7 +6,7 @@
 #Configuring MySQL for autmatic startup on reboot
 #chkconfig mysqld on
 
-mysql
+#mysql
 echo "You are now done and have installed mySQL Thank you for using this script by Jason Antao"
 
 #Feel free to use below, for debugging purposes, or to show capabilities
@@ -14,5 +14,5 @@ echo "You are now done and have installed mySQL Thank you for using this script 
 #mysql> GRANT ALL PRIVILEGES ON root.* TO root@localhost IDENTIFIED BY 'root';
 #mysql> FLUSH PRIVILEGES;
 
-mysql> exit
+#mysql> exit
 echo "You are now done and have installed mySQL Thank you for using this script by Jason Antao"
