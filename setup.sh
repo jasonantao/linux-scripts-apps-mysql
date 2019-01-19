@@ -15,4 +15,4 @@ echo "You are now done and have installed mySQL Thank you for using this script 
 #mysql> FLUSH PRIVILEGES;
 
 #mysql> exit
-echo "You are now done and have installed mySQL Thank you for using this script by Jason Antao"
+echo "You are now done and have installed mySQL Thank you for using this script by Jason Antao - mysql original script"
