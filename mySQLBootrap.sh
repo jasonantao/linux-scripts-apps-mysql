@@ -14,7 +14,7 @@ yum update -y
 
 # Finally Install MySQL as usual and start the service. 
 yum repolist enabled | grep "mysql.*-community.*"
-#yum install mysql56-server -y
+yum install mysql56-server -y
 yum install mysql-community-server -y
 service mysqld start
 
